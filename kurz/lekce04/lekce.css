@@ -1,0 +1,36 @@
+.circle{
+    border-radius: 50%;
+    background-color:rgb(34, 255, 0);
+    height: 50px;
+    width: 50px;
+}
+#container{
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+#box{
+    border-color: black;
+    border-style: solid;
+    padding:  10px;
+    flex-basis: 50%;
+    margin-right: 20px;
+    align-items: center;
+    
+}
+.a{
+    background-color: rgb(196, 27, 148);
+}
+.b{
+    background-color: rgb(245, 155, 11);
+}
+.c{
+    background-color: rgb(34, 150, 228);
+}
+.d{
+    background-color: rgb(33, 227, 65);
+}
+#box>img{
+    width: 150px;
+}

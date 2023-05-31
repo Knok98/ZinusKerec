@@ -1,0 +1,25 @@
+
+
+.square{
+    background-color: yellow;
+    border: solid purple;
+    height: 100px;
+    width: 100px;
+  
+}
+
+.square:hover{
+    transition: 5s;
+    background-color: green;
+    height: 200px;
+    width: 200px;
+    border-color: aquamarine;
+    transform: translateX(50px);
+    opacity: 0.5;
+  
+}
+.road{
+    background-image: url("https://cdn.pixabay.com/photo/2021/01/08/13/38/road-5899921_960_720.png");
+    width: 1100px;
+    height: 500px;
+}

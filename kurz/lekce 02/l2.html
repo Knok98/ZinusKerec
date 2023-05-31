@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="username">Přihlašovací jméno</label>
+        <input type="text" id="username"placeholder="Přihlašovací jméno"  readonly name="jmeno">
+       
+        <label for="password">Heslo</label>
+        <input type="password" id="password"placeholder="Heslo"name="heslo">
+       
+        <label for="email">Email</label>
+        <input type="email" id="email"placeholder="Email" value="@gmail.com"name="email">
+       
+        <textarea type="" id=""placeholder="Zpráva" value=""row="10"name="zprava">Dobrý den, moje jméno je</textarea>
+
+        <label for="date">datum rezervace</label>
+        <input type="date" id="date"value="2023-04-27" min="2023-04-27"max="2026-04-27"name="datum">
+  
+        <input type="checkbox" name="seznam" value="Ahoj">Ahoj
+        <input type="checkbox" name="seznam" value="Čau">Čau
+        <input type="radio" name="radio" value="a" id="radio-a"><label for="radio-a">A</label>
+        <input type="radio" name="radio" value="b"id="radio-b"><label for="radio-b">B</label>
+
+        <input type="radio" name="radioC" value="b">B
+        <button type="submit"name="odeslat">Odeslat</button>
+    </form>
+    <form action=""  target="_blank"autocomplete="off">
+        <fieldset>
+            <input value="10" name="range" type="range" min="1"max="50">
+            <input value="10" name="number" type="number" step="2"min="1"max="50">
+           
+           <select name="food">Vzberte j9dlo:
+                <option value="lasagne">lasagne</option>
+                <option value="rizek">řízek</option>
+                <option value="ryba">ryba</option>
+                <optgroup label="pasta">
+                    <option value="pastaA">pomodoro</option>
+                    <option value="pastaB">carbonara</option>
+                    <option value="pastaC">porcini</option>
+                </optgroup>
+
+           </select>
+           
+            <input type="reset">
+            <input type="text" name="" id="" disabled>
+                        
+            <button type="submit"name="odeslat">Odeslat</button>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ukol2.css"/>
+
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Základní info</legend>
+
+                <label for="firstName">Jméno:</label>
+                    <input type="text" name="firstName" id="firstName" placeholder="Adam">
+                <label for="surName">Přijmení:</label>
+                    <input type="text" name="surName" id="surName" placeholder="Smith">
+                <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="AdamSmith@Gmail.com">
+                <label for="password">Heslo:</label>
+                    <input type="password" name="password" id="password">
+                <label>Obrázek:</label>
+                    <input type="file" name="myImage" accept="image/png, image/gif, image/jpeg" />
+                
+        </fieldset>
+
+        <fieldset>
+            <legend>Základní parametry</legend>
+
+            <label for="email">Pohlaví:</label>
+                <input type="radio" name="radio" value="male" id="male"><label for="male">Muž</label>
+                <input type="radio" name="radio" value="female"id="female"><label for="female">Žena</label>
+            <label for="number">Věk:</label>
+                <input value="18" name="number" type="number" min="18"max="99">
+            <label for="date">Datum:</label>
+                <input type="date" id="date"value="" min="1900-01-27"max="2023-04-27"name="date">
+
+        </fieldset>
+           
+           
+
+        <fieldset>
+
+            <legend>Nepovinné údaje</legend>
+
+            <label for="message">O sebe:</label>
+                <textarea type="" id="" value=""row="10"name="message"></textarea>
+            <label for="message">Koníčky:</label>
+                <input type="checkbox" name="hobby" value="music">Hudba
+                <input type="checkbox" name="hobby" value="code">Programování
+
+            <label for="lang">Jazyk:</label>
+            <select name="lang">
+                
+                <optgroup label="EU">
+                    <option value="CZ">Czech</option>
+                    <option value="EN">English</option>
+                    <option value="GE">German</option>
+                </optgroup>
+
+                <optgroup label="Asia:">
+                    <option value="CH">Chinese</option>
+                    <option value="JP">Japanese</option>
+                    <option value="VT">Vietnamese</option>
+                </optgroup>
+            </select>
+
+            
+        </fieldset>
+        <button type="submit"name="odeslat">Odeslat</button>
+        <input type="reset">
+    </form>
+</body>
+</html>

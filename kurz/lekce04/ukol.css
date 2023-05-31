@@ -1,0 +1,146 @@
+body {
+    margin: 0%;
+}
+
+a>img {
+    width: 100px;
+    height: 100px;
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+
+}
+
+header {
+    
+    width: 100%
+}
+
+footer {
+    box-shadow: 0px -15px 15px 0px rgba(0, 0, 0, 0.34);
+    min-width: 100%;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(68, 241, 241, 0.439);
+    padding: 20px;
+
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+
+}
+
+.button {
+    background-color: rgba(68, 241, 241, 0.439);
+    border-radius: 30px;
+    padding: 10px;
+    border-style: none;
+
+}
+
+.interact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main>img {
+    flex-basis: 30%;
+}
+
+.intro {
+    flex-basis: 30%;
+    margin-top: 100px;
+}
+
+.link {
+
+    display: inline-flex;
+    margin-top: 20px;
+
+}
+
+.fa-facebook {
+    color: #3B5998;
+
+}
+
+.fa-twitter {
+    
+    color:#55ACEE;
+
+}
+
+.fa-linkedin {
+    
+    color:#007bb5;
+
+}
+
+.fa-instagram {
+    
+    color:  radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+
+}
+
+.fa-whatsapp {
+    color: #25d366;
+    margin-right: 0px;
+}
+
+.link>a {
+
+    font-size: 18px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 36px;
+    text-align: center;
+    text-decoration: none;
+    text-align: center;
+    margin-right: 10px;
+
+}
+
+main>img {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.interactli:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width:558px) {
+    main>img {
+        flex-basis: 15%;
+    }
+
+    .intro {
+        flex-basis: 15%;
+    }
+
+    footer {
+        margin-top: 20px;
+    }
+
+}

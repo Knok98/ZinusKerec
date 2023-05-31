@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,100;1,400&display=swap');
+html{
+    font-size: 16px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    background-color:rgb(89, 28, 24);
+
+}
+a{
+    text-decoration: none;
+}
+
+
+/*************NAVIGATION***********/
+
+nav{
+display: flex;
+justify-content:space-between;
+align-items: center;
+left: 0;
+top: 0;
+width: 100%;
+z-index: 1;
+background-color: black;
+height: 4.375rem;
+}
+nav ul{
+    display:flex;
+}
+nav h1{
+    color:whitesmoke;
+    font-family: fantasy;
+    font-style: oblique;
+    font-size: 3.125rem;
+    text-align: start;
+    user-select: none;
+}
+nav ul li a{
+    height: 2.5rem;
+    line-height: 2.688rem;
+    margin: 0.188rem;
+    padding: 0 1.375rem;
+    display: flex;
+    font-size: 0.73 rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.063rem;
+    border-radius: 0.188rem;
+    transition: 0.6s ease-in-out;
+    color: rgb(247, 238, 238);
+    user-select: none;
+}
+
+nav ul li a:hover{
+    color:goldenrod;
+
+}
+
+
+.bottom{
+    border-bottom: 0cqmax;
+    position:relative;
+    left: 80%;
+
+}
+.fa{
+    margin: 0.938rem;
+    width: 0.313rem;
+    height: 1.25rem;
+}
+
+.main-heading{
+color: whitesmoke;
+font-family: fantasy;
+font-style: oblique;
+font-size: 3.125rem;
+opacity:0.6;
+line-height: 6.25rem;
+text-align: center;
+margin: 0;
+top: 20%;
+position: relative;
+user-select: none;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    position:relative;
+    background-repeat: no-repeat;
+    background-size:cover;
+}

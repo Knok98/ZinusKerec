@@ -1,0 +1,69 @@
+body {
+    background-color: rgb(57, 57, 57);
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+
+section {
+    border-radius: 30%;
+    border-style: solid;
+    border-width: 5px;
+   
+    width: 600px;
+    height: 60%;
+    align-items: center;
+    margin: 20px;
+    
+
+}
+
+.first {color: aqua;
+    background-color: rgb(151, 84, 214);
+    border-color: rgba(59, 11, 114, 0.668);
+    border-radius: 10%;
+
+}
+
+.second {
+    background-color:aquamarine;
+    color: rgb(20, 47, 181);
+    border-color: rgb(12, 126, 184);
+    border-radius: 0%;
+    width: auto;
+    height: auto;
+}
+
+.third {
+    text-align: center;
+    color: brown;
+    background-color: beige;
+    border-color: rgb(189, 83, 22);
+}
+
+
+
+h2 {
+    text-align: center;
+    display: block;
+    color: black;
+    text-decoration: underline coral;
+}
+
+
+h1{
+    display: block !important;
+    margin-bottom: 20px;
+}
+.ordered{
+    
+    max-height: 50px;
+    overflow: scroll;
+    width: 100px;
+    font-weight: bold;
+}
+.unordered{
+    max-height: 100px;
+    overflow: scroll;
+    width: 50%;
+}

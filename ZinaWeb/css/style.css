@@ -1,0 +1,49 @@
+
+
+
+.main{
+    width: 100%;
+    height: 50rem;
+    position:relative;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image:url("../images/tygr_uvod.jpg");
+    
+}
+
+
+.main-heading{
+color: whitesmoke;
+font-family: fantasy;
+font-style: oblique;
+font-size: 3.125rem;
+opacity:0.6;
+line-height: 6.25rem;
+text-align: center;
+margin: 0;
+top: 20%;
+position: relative;
+user-select: none;
+}
+.h2{
+    text-align: center !important;
+}
+.bio{
+    background: rgba(4, 4, 4, 0.7);
+    box-sizing:content-box;
+    color: aliceblue;
+    width:37.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 5%;
+    flex-direction: column;
+}
+.artist{
+    width: 7.5rem;
+    height: 7.5rem;
+    float: right;
+}
