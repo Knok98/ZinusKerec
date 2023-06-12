@@ -1,5 +1,6 @@
 <?php
 require 'adminFunc.php';
+require 'galConnect.php';
 
 if (isset($_FILES['upload'])) {
     $file = $_FILES['upload'];
@@ -23,10 +24,7 @@ if (isset($_FILES['upload'])) {
                 $fileDestination = 'galUploads/' . $fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDestination);
                 
-                $con=mysqli_connect("localhost", "root", "", "zinuskerec");
-                if (mysqli_connect_errno()) {
-                    die("Conection Error " . mysqli_connect_error());
-                }
+                
                 $date = date("Y-m-d h:i:sa");
                 $sql = 'INSERT INTO gallery(odkaz,datum) VALUES ("' . $fileDestination . '", "' . $date . '")';
 
