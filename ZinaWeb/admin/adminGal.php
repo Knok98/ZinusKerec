@@ -17,20 +17,25 @@
             error('6','obrázek není daného typu');
         ?>
     </div>
+    </div>
     <div id='gallery'>
         <?php 
-            $rowcount=countPic();
             $con=mysqli_connect("localhost","root","","zinuskerec");
-            for($x=1;$x<=$rowcount;$x++){
+            if (mysqli_connect_errno()) {
+                    die("Conection Error " . mysqli_connect_error());
+                }
                 
-                $sqlquery=mysqli_query($con,"SELECT odkaz from gallery where `id`=$x");
-                $row=mysqli_fetch_array($sqlquery,MYSQLI_ASSOC);
-                echo '<a target="_blank" href=$row["odkaz"]></a>';
-                echo '<img=$row["odkaz"]>';
-            }
+                $sql="SELECT odkaz FROM gallery ORDER BY id";
+                $result=mysqli_query($con,$sql);
+                while($row=mysqli_fetch_assoc($result)){
+                    echo "<div class='pic'>";
+                    echo  "<a target='_blank' href='".$row["odkaz"]."'>";
+                    echo "<img src='".$row["odkaz"]."'></a>";
+                    echo "</div>";
+                }
+                
         ?>
-    </div>
-</div>
+   </div>
 
 </html>
 </body>

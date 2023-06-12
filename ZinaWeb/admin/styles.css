@@ -1,0 +1,15 @@
+#gallery{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: max-content;
+    max-height: 600px;
+    
+}
+.pic{
+    width: 200px;
+    height: 250px;
+}
+.pic> a img{
+    max-width: 100%;
+    height: auto;
+}
