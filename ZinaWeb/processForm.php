@@ -5,7 +5,7 @@ $message = $_POST["message"];
 $contactPurpose = $_POST["contactPurpose"];
 
 $host = "localhost";
-$dbname = "client_message";
+$dbname = "zinuskerec";
 $username = "root";
 $password = "";
 
@@ -15,7 +15,7 @@ if (mysqli_connect_errno()) {
     die("Conection Error " . mysqli_connect_error());
 }
 
-$sql = 'INSERT INTO message(name, email, body, category) VALUES ("' . $user . '", "' . $email . '", "' . $message . '", "' . $contactPurpose . '")';
+$sql = 'INSERT INTO client_message(name, email, body, category) VALUES ("' . $user . '", "' . $email . '", "' . $message . '", "' . $contactPurpose . '")';
 
 if (mysqli_query($conn, $sql)) {
     echo " Record has been saved";
