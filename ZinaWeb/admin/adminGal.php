@@ -1,6 +1,7 @@
 <?php 
     include 'adminHeader.php';
-    include 'galConnect.php';
+    require 'database.php';
+    $database=new Database();
     start();
 ?>
 
@@ -22,9 +23,8 @@
     </div>
     <div id='gallery'>
         <?php 
-                $sql="SELECT * FROM gallery ORDER BY id";
-                $result=mysqli_query($con,$sql);
-                while($row=mysqli_fetch_assoc($result)){
+            foreach($database->getAll()as$row){
+                
                     echo "<div class='pic'>";
                     echo  "<a target='_blank' href='".$row["odkaz"]."'>";
                     echo "<img src='".$row["odkaz"]."'></a>";

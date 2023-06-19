@@ -5,7 +5,8 @@ html{
 body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    height: 100%;
+    width:100%;
     font-family: 'Raleway', sans-serif;
     background-color:rgb(89, 28, 24);
 
@@ -93,4 +94,15 @@ user-select: none;
     position:relative;
     background-repeat: no-repeat;
     background-size:cover;
+}
+.footer{
+    position:relative;
+    display: flex;
+    align-self: baseline;
+    justify-content:flex-end;
+    
+    color: whitesmoke;
+}
+.footer p{
+    margin-right: 20px;
 }

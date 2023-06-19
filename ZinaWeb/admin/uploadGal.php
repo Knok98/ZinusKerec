@@ -2,6 +2,9 @@
 require 'adminFunc.php';
 require 'galConnect.php';
 
+$error=[];
+$success=false;
+
 if (isset($_FILES['upload'])) {
     $file = $_FILES['upload'];
     $fileName = $_FILES['upload']['name'];
@@ -44,3 +47,4 @@ if (isset($_FILES['upload'])) {
         header('Location: adminGal.php?er=6');
     }
 }
+

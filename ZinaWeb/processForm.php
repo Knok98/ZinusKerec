@@ -19,4 +19,6 @@ $sql = 'INSERT INTO client_message(name, email, body, category) VALUES ("' . $us
 
 if (mysqli_query($conn, $sql)) {
     echo " Record has been saved";
+    header('Location:index.php?page=booking');
+    
 }

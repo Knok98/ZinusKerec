@@ -82,4 +82,10 @@ flex:2;
     font-style: italic;
     
 }
-.map a { color: inherit; } 
+.map a { 
+    color: inherit;
+    margin: 10px;
+ } 
+.map p{
+    margin: 10px;
+}

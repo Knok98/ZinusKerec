@@ -9,3 +9,4 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="validation.js"></script></script>
