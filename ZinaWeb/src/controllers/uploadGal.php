@@ -24,7 +24,7 @@ if (isset($_FILES['upload'])) {
 
             if ($fileSize < 5000000) {
                 $fileNameNew = uniqid() . "." . $fileActualExt;
-                $fileDestination = '../../data/galUploads' . $fileNameNew;
+                $fileDestination = '../../data/galUploads/' . $fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDestination);
                 
                 
