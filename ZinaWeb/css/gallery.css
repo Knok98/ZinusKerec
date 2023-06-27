@@ -9,6 +9,8 @@
   max-width: max-content;
   max-height: 600px;
   gap: 10px;
+  bottom: 0px;
+  height: 190;
   
 }
 

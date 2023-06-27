@@ -7,7 +7,7 @@
     position:relative;
     background-repeat: no-repeat;
     background-size:cover;
-    background-image:url("../images/tygr_uvod.jpg");
+    background-image:url("../data/images/tygr_uvod.jpg");
     
 }
 
@@ -41,6 +41,7 @@ user-select: none;
     margin: 0 auto;
     margin-top: 5%;
     flex-direction: column;
+    padding-bottom: 5%;
 }
 .artist{
     width: 7.5rem;
