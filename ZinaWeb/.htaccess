@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^src/components/index.php?page=menu$ ZinaWeb/menu[R=301,L]

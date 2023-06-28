@@ -1,6 +1,7 @@
 <?php
 require 'adminFunc.php';
 require '../zinaAPI.php';
+start();
 
 $error=[];
 $success=false;
@@ -30,18 +31,17 @@ if (isset($_FILES['upload'])) {
                 
                 $dataSave->save($fileDestination);
                 $dataSave->addError('Nahrání proběhlo úspěšně');
-                header('Location: ../components/gallery/adminGal.php?er=3');
+
             } else {
                 $dataSave->addError('obrázek je příliš velký');
-                header('Location: ../components/gallery/adminGal.php?er=4');
+
             }
         } else {
             $dataSave->addError('Chyba při nahrávání');
-            header('Location: ../components/gallery/adminGal.php?er=5');
+
         }
     } else {
         $dataSave->addError('obrázek není daného typu');
-        header('Location: ../components/gallery/adminGal.php?er=6');
     }
 }
-//header('Location: ../components/gallery/adminGal.php?iid=' . $dataSave->getInstance());
+header('Location: ../components/gallery/adminGal.php?iid=' . $dataSave->getInstance());

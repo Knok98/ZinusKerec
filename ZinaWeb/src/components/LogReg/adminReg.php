@@ -1,7 +1,7 @@
 <?php
 
 require '../../controllers/adminFunc.php';
-include 'adminHeader.php';
+include '../adminHeader.php';
 ?>
 <link rel='stylesheet' href='../../../css/adminStyles.css'>
 <form action='adminLogProces.php' method='post'>

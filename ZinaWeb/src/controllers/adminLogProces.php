@@ -30,11 +30,7 @@ if ($userLog->__construct()) {
         $userLog->addError('žádné výsledky');
     }
 }
-if (count($userLog->error) != 0) {
-    foreach ($userLog->error as $value) {
-        echo $value;
-        echo '<br>';
-    }
-    header("Location: ../components/adminLogin.php");
-}
-header("Location: ../components/adminMain.php");
+if (count($userLog->error) == null) {
+    header("Location: ../components/adminMain.php");
+}else{header('Location: ../components/LogReg/adminLogin.php?iid=' . $userLog->getInstance());}
+    

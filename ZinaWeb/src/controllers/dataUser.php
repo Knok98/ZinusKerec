@@ -6,9 +6,11 @@ class DbTorii
     private $conn;
     public array $error = [];
     public $passInput;
+    private string $erInstance;
 
-    function __construct()
+    public function __construct()
     {
+        $this->erInstance = uniqid();
         if ($this->conn instanceof mysqli) {
             return true;
         }
@@ -47,4 +49,11 @@ class DbTorii
 
         return $sqlQuery->get_result();
     }
+
+    public function getInstance(): string
+    {
+        $_SESSION[$this->erInstance] = json_encode($this->error);
+        return $this->erInstance;
+    }
+
 }

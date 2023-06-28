@@ -11,7 +11,10 @@
   gap: 10px;
   bottom: 0px;
   height: 190;
-  
+  overflow-y: auto;
+}
+#gallery::-webkit-scrollbar{
+  display: none;
 }
 
 

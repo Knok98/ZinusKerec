@@ -34,7 +34,7 @@
 
         <p>phone number: + 420 728 000 000</p>
         <a href="mailto:zii1324%40email.cz">email: zii324&#064;email.cz</a>
-        <p>Adress: Římská 1287/41, 120 00 Vinohrady</p>
+        <p>Adress: Otakarova 222/11, 140 00 Praha 4-Nusle</p>
 
     </section>
 

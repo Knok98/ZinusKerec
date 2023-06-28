@@ -1,6 +1,7 @@
 <?php
 require '../../controllers/adminFunc.php';
 include '../adminHeader.php';
+session_start();
 ?>
 
 <link rel='stylesheet' href='../../../css/adminStyles.css'>
@@ -11,9 +12,16 @@ include '../adminHeader.php';
 </form>
 <div class='errWind'>
 <?php 
+if (isset($_GET['iid'])) {
+    if (isset($_SESSION[$_GET['iid']])) {
+        $error = json_decode($_SESSION[$_GET['iid']]);
+        foreach ($error as $err) {
+            echo "<div>" . $err . "</div>";
+        }
+        unset($_SESSION[$_GET['iid']]);
+    }
+}
     error('0','Úspěšně odhlášeno');
-    error('1', 'Špatné přihlašovací údaje');
-    error('2', 'Pro vstup do profilu musíte být přihlášen/a.');
     ?>
 </div>
 

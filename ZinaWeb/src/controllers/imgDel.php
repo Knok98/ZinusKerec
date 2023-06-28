@@ -1,9 +1,8 @@
 <?php
 require '../zinaAPI.php';
-
+session_start();
 $dataDel=new DbGall();
-
-$dataDel->del();
 $dataDel->addError('obrázek smazán');
-header('Location: ../components/gallery/adminGal.php?er=7');
+$dataDel->del();
+header('Location: ../components/gallery/adminGal.php?iid='.$dataDel->getInstance());
 ?>
