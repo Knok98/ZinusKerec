@@ -89,3 +89,55 @@ flex:2;
 .map p{
     margin: 10px;
 }
+
+
+@media only screen and (max-width: 1150px) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+        margin-right:0px;
+    }
+    .contactForm {
+        margin-right:2px;
+        margin-left:2px;
+        flex-wrap:nowrap;
+
+    }
+}
+@media only screen and (max-width: 605px) {
+    .contact form input,.contact form textarea{
+        font-size: 20px;
+        width: 100%;
+        height: 1.25rem;
+        margin: 0.313rem 0rem;
+        padding: 0.625rem;
+    }
+    .contact form textarea{
+        width: 100%;
+        height: 100px;
+        }
+    form{
+        align-items: center;
+    }
+    .contact form{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        width: 100%;
+    }
+    .contactForm map{
+        width:100%;
+        margin-right:0px;
+        margin-left:0px;
+    }
+    .map p{
+       font-size: 15px;
+       display: flex;
+       justify-content: center;
+    }
+    .map a{
+        font-size: 15px;
+       display: flex;
+       justify-content: center;
+    }
+    
+}
