@@ -52,7 +52,7 @@ $(document).ready(function () {
   
       $.ajax({
         type: "POST",
-        url: "../../controllers/adminRegProcess.php",
+        url: "../../controllers/adminRegProces.php",
         data: formData,
         dataType: "json",
         encode: true,
@@ -60,23 +60,23 @@ $(document).ready(function () {
         console.log(data);
         if (!data.success) {
             if (data.errors.name) {
-              $("#name").addClass("has-error");
-              $("#name").append(
+              $("#jmeno").addClass("has-error");
+              $("#jmeno").append(
                 '<div class="help-block">' + data.errors.name + "</div>"
               );
             }
     
             if (data.errors.pass) {
-              $("#pass").addClass("has-error");
-              $("#pass").append(
+              $("#pasword").addClass("has-error");
+              $("#pasword").append(
                 
                 '<div class="help-block">' + data.errors.pass + "</div>"
               );
             }
     
             if (data.errors.rewind) {
-              $("#rewind").addClass("has-error");
-              $("#rewind").append(
+              $("#pasword").addClass("has-error");
+              $("#pasword").append(
                 '<div class="help-block">' + data.errors.rewind + "</div>"
               );
             }

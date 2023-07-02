@@ -8,7 +8,7 @@ include '../adminHeader.php';
 <link rel='stylesheet' href='../../../css/adminStyles.css'>
 <div class="formHolder">
 <form action='../../controllers/adminRegProces.php' method='post' class=" d-flex justify-content-center bg-light">
-    <div  class="row mb-2 w-50">
+    <div  class="row mb-2 w-50 jmeno">
         <label for="name"class="col-sm-2 col-form-label">Přezdívka</label>
         <input type="text" class="form-control" id="name" name='name'placeholder="jméno" />
     </div>
