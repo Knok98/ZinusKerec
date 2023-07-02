@@ -41,6 +41,12 @@ function elements(str) {
     return pattern.test(str);
 }*/
 
+//document.getElementById("submit").addEventListener("onclick", reset);
+
+function reset(){
+  const element = document.getElementById("help");
+  element.remove();
+}
 
 $(document).ready(function () {
     $("form").submit(function (event) {
@@ -62,7 +68,7 @@ $(document).ready(function () {
             if (data.errors.name) {
               $("#jmeno").addClass("has-error");
               $("#jmeno").append(
-                '<div class="help-block">' + data.errors.name + "</div>"
+                '<div id="help" class="help-block">' + data.errors.name + "</div>"
               );
             }
     
@@ -70,20 +76,20 @@ $(document).ready(function () {
               $("#password").addClass("has-error");
               $("#password").append(
                 
-                '<div class="help-block">Heslo musí obsahovat alespoň' + data.errors.pass + "</div><br>"
+                '<div id="help" class="help-block">Heslo musí obsahovat alespoň' + data.errors.pass + "</div><br>"
               );
             }
     
             if (data.errors.rewind) {
               $("#password").addClass("has-error");
               $("#password").append(
-                '<div class="help-block">Hesla ' + data.errors.rewind + "</div><br>"
+                '<div id="help" class="help-block">Hesla ' + data.errors.rewind + "</div><br>"
               );
             }
           } else {
             $("#suc").addClass("has-error");
               $("#suc").append(
-                '<div class="help-block">' + data.message + "</div><br>"
+                '<div id="help" class="help-block">' + data.message + "</div><br>"
               );
           }
     

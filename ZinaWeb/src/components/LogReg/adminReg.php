@@ -7,7 +7,7 @@ include '../adminHeader.php';
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <link rel='stylesheet' href='../../../css/adminStyles.css'>
 <div class="formHolder">
-<form action='../../controllers/adminRegProces.php' method='post' class=" d-flex justify-content-center bg-light">
+<form action='../../controllers/adminRegProces.php' method='post' class=" d-flex justify-content-center bg-light"id="submit">
     <div  class="row mb-2 w-50">
         <label for="name"class="col-sm-2 col-form-label">Přezdívka</label>
         <input type="text" class="form-control" id="name" name='name'placeholder="jméno" />
@@ -19,7 +19,7 @@ include '../adminHeader.php';
         <input type='password' class="form-control" id='rewind' name='rewind' placeholder='potvrdit heslo'>
     </div>
     <div id='password'class="text-danger"></div>
-    <button type="submit" class="btn btn-primary">odeslat</button>
+    <button type="submit" class="btn btn-primary" >odeslat</button>
     <div id='suc'class="text-success"></div>
 </div>
 
