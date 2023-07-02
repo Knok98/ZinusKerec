@@ -9,7 +9,7 @@ start();
 <link rel='stylesheet' href='../../../css/adminStyles.css  '>
 <div class='upload'>
     <p>Vložte obrázek dle výběru</p>
-    <form action="../../controllers/uploadGal.php" enctype="multipart/form-data" method='post'>
+    <form class="uploadImg"action="../../controllers/uploadGal.php" enctype="multipart/form-data" method='post'>
         <input type='file' name='upload'>
         <button type='submit'>nahrát</button>
     </form>

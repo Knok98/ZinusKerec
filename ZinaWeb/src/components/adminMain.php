@@ -16,6 +16,7 @@
             <a href='contactForm/adminForm.php'>Formulář</a>
         </div>
     </div>
+        <a href="LogReg/adminReg.php">Nový uživatel</a>
         <a href="LogReg/adminLogout.php">Odhlásit se</a>
     </nav>
     
