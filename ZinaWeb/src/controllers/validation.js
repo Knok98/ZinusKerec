@@ -67,23 +67,24 @@ $(document).ready(function () {
             }
     
             if (data.errors.pass) {
-              $("#pasword").addClass("has-error");
-              $("#pasword").append(
+              $("#password").addClass("has-error");
+              $("#password").append(
                 
-                '<div class="help-block">' + data.errors.pass + "</div>"
+                '<div class="help-block">Heslo musí obsahovat alespoň' + data.errors.pass + "</div><br>"
               );
             }
     
             if (data.errors.rewind) {
-              $("#pasword").addClass("has-error");
-              $("#pasword").append(
-                '<div class="help-block">' + data.errors.rewind + "</div>"
+              $("#password").addClass("has-error");
+              $("#password").append(
+                '<div class="help-block">Hesla ' + data.errors.rewind + "</div><br>"
               );
             }
           } else {
-            $("form").html(
-              '<div class="alert alert-success">' + data.message + "</div>"
-            );
+            $("#suc").addClass("has-error");
+              $("#suc").append(
+                '<div class="help-block">' + data.message + "</div><br>"
+              );
           }
     
         });
