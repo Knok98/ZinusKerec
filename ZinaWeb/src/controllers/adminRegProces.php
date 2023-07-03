@@ -11,6 +11,8 @@ function comp($str1,$str2){
     }
     return false;
 }
+
+
 //jmeno
 if (empty($_POST['name'])) {
     $registr->error['name'] = 'Vyžadováno přihlašovací jméno.';
@@ -51,9 +53,18 @@ if (preg_match("/\s/", $_POST['pass'])) {
 if (!empty($registr->error)) {
     $data['success'] = false;
     $data['errors'] = $registr->error;
+    
 } else {
+   
     $data['success'] = true;
     $data['message'] = 'uživatel byl přidán';
-}
 
+
+}
+if (empty($data['errors'])){
+    $user=$_POST['name'];
+    $pass= hash('sha256', $_POST['pass']);
+    $registr->addUser($user,$pass);
+    }
 echo json_encode($data);
+
