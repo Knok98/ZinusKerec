@@ -49,6 +49,13 @@ class DbTorii
 
         return $sqlQuery->get_result();
     }
+    public function addUser($user,$pass){
+        $sql = 'INSERT INTO admin(name,password) VALUES ("' . $user . '", "' . $pass . '")';
+
+        if ($this->conn->query($sql)) {
+            echo " Record has been saved";
+        }
+    }
 
     public function getInstance(): string
     {

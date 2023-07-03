@@ -50,6 +50,10 @@ function reset(){
 
 $(document).ready(function () {
     $("form").submit(function (event) {
+      $("#pass").removeClass("has-error");
+      $("#jmeno").removeClass("has-error");
+      $("#suc").removeClass("has-error");
+      $(".help-block").remove();
       var formData = {
         name: $("#name").val(),
         pass: $("#pass").val(),
@@ -68,7 +72,7 @@ $(document).ready(function () {
             if (data.errors.name) {
               $("#jmeno").addClass("has-error");
               $("#jmeno").append(
-                '<div id="help" class="help-block">' + data.errors.name + "</div>"
+                '<div  class="help-block">' + data.errors.name + "</div>"
               );
             }
     
@@ -76,20 +80,20 @@ $(document).ready(function () {
               $("#password").addClass("has-error");
               $("#password").append(
                 
-                '<div id="help" class="help-block">Heslo musí obsahovat alespoň' + data.errors.pass + "</div><br>"
+                '<div  class="help-block">Heslo musí obsahovat alespoň' + data.errors.pass + "<br></div>"
               );
             }
     
             if (data.errors.rewind) {
               $("#password").addClass("has-error");
               $("#password").append(
-                '<div id="help" class="help-block">Hesla ' + data.errors.rewind + "</div><br>"
+                '<div  class="help-block">Hesla ' + data.errors.rewind + "<br></div>"
               );
             }
           } else {
             $("#suc").addClass("has-error");
               $("#suc").append(
-                '<div id="help" class="help-block">' + data.message + "</div><br>"
+                '<div  class="help-block">' + data.message + "<br></div>"
               );
           }
     
