@@ -1,37 +1,11 @@
 <?php
-
-class DbGall
+class DbGall extends DbMain
 {
-    private mysqli $conn;
+   
     private $id = 0;
-    public array $error = [];
-    private string $erInstance;
+   
 
-    public function __construct()
-    {
-        $this->erInstance = uniqid();
-        $this->conn = new mysqli('localhost', 'root', '', 'zinuskerec');
-        if ($this->conn->connect_errno) {
-            $this->addError($this->conn->connect_error);
-            return false;
-        }
-    }
-    public function addError($err)
-    {
-        array_push($this->error, $err);
-    }
-    private function processSql(string $sqlQuery): array
-    {
-        $prepareSql = $this->conn->prepare($sqlQuery);
-        $prepareSql->execute();
-        $result = $prepareSql->get_result();
-        $return = [];
-
-        while ($row = $result->fetch_assoc()) {
-            $return[] = $row;
-        }
-        return $return;
-    }
+    
     public function del()
     {
         $id = $_GET['id'];
@@ -48,7 +22,7 @@ class DbGall
     public function getAll(): array
     {
         $sql = "SELECT * FROM gallery ORDER BY id";
-        return $this->processSql($sql);
+        return $this->process($sql,"all");
     }
 
     public function save($fileDestination)
@@ -61,9 +35,4 @@ class DbGall
         }
     }
 
-    public function getInstance(): string
-    {
-        $_SESSION[$this->erInstance] = json_encode($this->error);
-        return $this->erInstance;
-    }
 }

@@ -12,6 +12,7 @@ start();
     <form class="uploadImg"action="../../controllers/uploadGal.php" enctype="multipart/form-data" method='post'>
         <input type='file' name='upload'>
         <button type='submit'>nahrát</button>
+        
     </form>
     <div class='errWind'>
         <?php

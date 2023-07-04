@@ -5,10 +5,10 @@ require '../zinaAPI.php';
 $user = $_POST['username'];
 $passInput = hash('sha256', $_POST['password']);
 
-$userLog = new Dbtorii();
+$userLog = new DbTorii();
 if ($userLog->__construct()) {
     $sql = "SELECT password FROM admin WHERE name='" . $user . "'";
-    $result = $userLog->process($sql);
+    $result = $userLog->process($sql,"single");
 
 
     if ($result) {

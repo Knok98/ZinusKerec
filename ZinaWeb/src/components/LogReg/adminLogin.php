@@ -5,7 +5,6 @@ session_start();
 ?>
 
 <link rel='stylesheet' href='../../../css/adminStyles.css'>
-
 <div class="formHolder">
     <form action='../../controllers/adminLogProces.php' method='post' class=" d-flex justify-content-center bg-light">
         <div class="row mb-2 w-50">

@@ -55,16 +55,14 @@ if (!empty($registr->error)) {
     $data['errors'] = $registr->error;
     
 } else {
-   
+    $user=$_POST['name'];
+    $pass= hash('sha256', $_POST['pass']);
+    $registr->addUser($user,$pass);
     $data['success'] = true;
     $data['message'] = 'uživatel byl přidán';
 
 
 }
-if (empty($data['errors'])){
-    $user=$_POST['name'];
-    $pass= hash('sha256', $_POST['pass']);
-    $registr->addUser($user,$pass);
-    }
+
 echo json_encode($data);
 

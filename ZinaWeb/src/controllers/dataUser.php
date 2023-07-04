@@ -20,7 +20,7 @@ class DbTorii
             $this->addError($this->conn->connect_error);
             return false;
         }
-
+    
         return true;
     }
     function __destruct()
@@ -33,8 +33,8 @@ class DbTorii
     {
         array_push($this->error, $err);
     }
-    public function process($sql)
-    {
+    public function process($sql,$type)
+    {if($type=="single"){
         if (!$this->conn instanceof mysqli) {
             $this->addError("attempt to connect to nonexisting mysql");
             return false;
@@ -48,6 +48,7 @@ class DbTorii
         }
 
         return $sqlQuery->get_result();
+    }
     }
     public function addUser($user,$pass){
         $sql = 'INSERT INTO admin(name,password) VALUES ("' . $user . '", "' . $pass . '")';
