@@ -2,6 +2,7 @@
     require '../controllers/adminFunc.php';
     include 'adminHeader.php';
     start();
+    
 ?>
 <link rel='stylesheet' href='../../css/adminStyles.css  '>   
 <nav id='menu'>

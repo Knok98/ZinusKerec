@@ -1,23 +1,14 @@
 <?php
-$user = $_POST["user"];
-$email = $_POST["email"];
-$message = $_POST["message"];
-$contactPurpose = $_POST["contactPurpose"];
+require '../zinaAPI.php';
+$message=new DbContact;
+$data = [];
+$error=[];
 
-$host = "localhost";
-$dbname = "zinuskerec";
-$username = "root";
-$password = "";
+if ($_POST['user'] && $_POST['email'] && $_POST['message']) {
+    $message->addMsg();
+    $data['success'] = true;
 
-$conn=new mysqli($host, $username, $password, $dbname);
-
-if (mysqli_connect_errno()) {
-    die("Conection Error " . mysqli_connect_error());
+}else{
+    $data['success'] = false;
 }
-
-$sql = 'INSERT INTO client_message(name, email, body, category) VALUES ("' . $user . '", "' . $email . '", "' . $message . '", "' . $contactPurpose . '")';
-
-if (mysqli_query($conn, $sql)) {
-    header('Location:../components/index.php?page=booking');
-    
-}
+echo json_encode($data);

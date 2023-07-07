@@ -54,6 +54,12 @@ $(document).ready(function () {
       $("#jmeno").removeClass("has-error");
       $("#suc").removeClass("has-error");
       $(".help-block").remove();
+     if($("#name").val()==""||$("#pass").val()==""||$("#rewind").val()==""){
+      $("#password").addClass("has-error");
+              $("#password").append(
+                '<div  class="help-block">Chybí některé údaje</div>'
+              );
+     }
       var formData = {
         name: $("#name").val(),
         pass: $("#pass").val(),
@@ -70,6 +76,7 @@ $(document).ready(function () {
         console.log(data);
         if (!data.success) {
             if (data.errors.name) {
+              document.getElementById("name").value="";
               $("#jmeno").addClass("has-error");
               $("#jmeno").append(
                 '<div  class="help-block">' + data.errors.name + "</div>"
@@ -77,6 +84,7 @@ $(document).ready(function () {
             }
     
             if (data.errors.pass) {
+              document.getElementById("pass").value="";
               $("#password").addClass("has-error");
               $("#password").append(
                 
@@ -85,12 +93,17 @@ $(document).ready(function () {
             }
     
             if (data.errors.rewind) {
+              document.getElementById("pass").value="";
+              document.getElementById("rewind").value="";
               $("#password").addClass("has-error");
               $("#password").append(
                 '<div  class="help-block">Hesla ' + data.errors.rewind + "<br></div>"
               );
             }
           } else {
+            document.getElementById("pass").value="";
+            document.getElementById("rewind").value="";
+            document.getElementById("name").value="";
             $("#suc").addClass("has-error");
               $("#suc").append(
                 '<div  class="help-block">' + data.message + "<br></div>"

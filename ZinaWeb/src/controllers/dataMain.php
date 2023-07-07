@@ -12,6 +12,7 @@ class DbMain
             $this->addError($this->conn->connect_error);
             return false;
         }
+        return true;
     }
     public function addError($err)
     {
@@ -31,6 +32,7 @@ class DbMain
             return false;
         }
         $prepareSql = $this->conn->prepare($sql);
+        // bind param doplnit ?
         $prepareSql->execute();
         if ($prepareSql->errno) {
             $this->addError($prepareSql->error);
@@ -46,7 +48,7 @@ class DbMain
         return $return;
         }
         if($type=="single"){
-            return $prepareSql->get_result();
+            return $result;
         }
     }
 
