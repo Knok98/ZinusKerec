@@ -17,7 +17,7 @@ function comp($str1,$str2){
 //jmeno
     $user=$_POST['name'];
     $sql = "SELECT password FROM admin WHERE name='" . $user . "'";
-    $result = $registr->process($sql);
+    $result = $registr->process($sql,"single");
         if ($result) {
         $num_row = mysqli_num_rows($result);
         $row = $result->fetch_assoc();
