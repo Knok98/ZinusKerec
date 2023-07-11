@@ -43,7 +43,7 @@ if (comp($_POST['pass'],$_POST['rewind'])) {
     $error['rewind'] = 'se neschodují';
 }
 if (strlen($_POST['pass'])<8) {
-    $error['pass'][] = ' nejméně 8 znaků';
+    $error['pass'][] = ' 8 znaků';
 }
 if (!preg_match("/\d/", $_POST['pass'])) {
     $error['pass'][] = " 1 číslo";

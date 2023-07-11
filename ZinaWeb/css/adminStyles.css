@@ -1,4 +1,4 @@
-#gallery{
+#gallery {
     display: flex;
     flex-wrap: wrap;
     max-width: max-content;
@@ -6,72 +6,79 @@
     gap: 20px;
     margin-left: 20px;
 }
-.upload{
-    font-size:30px ;
+
+.upload {
+    font-size: 30px;
     color: rgb(231, 121, 43);
 }
-#gallery a{
-color: rgb(231, 121, 43);
+
+#gallery a {
+    color: rgb(231, 121, 43);
 }
-.pic{
+
+.pic {
     width: 200px;
     height: 300px;
 }
 
-.pic img{
+.pic img {
     width: 200px !important;
     height: auto !important;
     aspect-ratio: 3 / 4;
 }
 
-#menu{
+#menu {
     width: 100%;
     height: 800px;
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     margin-top: -5%;
-    
-   
-    
+
+
+
 }
-.CMS{
+
+.CMS {
     width: 100%;
-    display:inline-flex;
+    display: inline-flex;
     justify-content: space-around;
-    
-    
-    
+
+
+
 }
-.link{
-    
+
+.link {
+
     padding: 2%;
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.524) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    background: linear-gradient(90deg, rgba(227,222,38,1) 7%, rgba(255,72,0,0.938813025210084) 93%);
+    background: linear-gradient(90deg, rgba(227, 222, 38, 1) 7%, rgba(255, 72, 0, 0.938813025210084) 93%);
 }
-#menu a{
+
+#menu a {
     text-decoration: none;
     color: aliceblue;
 }
 
-body{
+body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(54, 52, 52);
     max-width: 100%;
     height: 700px;
-    
+
 }
 
 
-.errWind{
+.errWind {
     color: red;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-self: center;
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -80,24 +87,28 @@ form {
     padding: 20px;
     align-self: center;
     border-radius: 30px;
- }
- .uploadImg{
+}
+
+.uploadImg {
 
     font-size: medium;
     align-items: start;
     flex-direction: row;
- }
- .formHolder{
+}
+
+.formHolder {
     display: flex;
     justify-content: center;
     height: 100%;
-    
 
-    
- }
- tr{
-    width:30%;
- }
- a:link{
+
+
+}
+
+tr {
+    width: 30%;
+}
+
+a:link {
     text-decoration: none;
- }
+}

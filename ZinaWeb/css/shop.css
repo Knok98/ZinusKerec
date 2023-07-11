@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,100;1,400&display=swap');
-body{
+/*body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,10 +17,10 @@ ul{
 input,button,textarea{
     border:none;
     outline: none;
-}
+}*/
 /*************NAVIGATION***********/
 
-nav{
+/*nav{
 display: flex;
 justify-content:space-between;
 align-items: center;
@@ -79,4 +79,4 @@ nav ul li a:hover{
     margin: 15px;
     width: 5px;
     height: 20px;
-}
+}*/

@@ -43,79 +43,78 @@ function elements(str) {
 
 //document.getElementById("submit").addEventListener("onclick", reset);
 
-function reset(){
+function reset() {
   const element = document.getElementById("help");
   element.remove();
 }
 
 $(document).ready(function () {
-    $("form").submit(function (event) {
-      $("#pass").removeClass("has-error");
-      $("#jmeno").removeClass("has-error");
-      $("#suc").removeClass("has-error");
-      $(".help-block").remove();
-     if($("#name").val()==""||$("#pass").val()==""||$("#rewind").val()==""){
+  $("form").submit(function (event) {
+    $("#pass").removeClass("has-error");
+    $("#jmeno").removeClass("has-error");
+    $("#suc").removeClass("has-error");
+    $(".help-block").remove();
+    if ($("#name").val() == "" || $("#pass").val() == "" || $("#rewind").val() == "") {
       $("#password").addClass("has-error");
-              $("#password").append(
-                '<div  class="help-block">Chybí některé údaje</div>'
-              );
-     }
-      var formData = {
-        name: $("#name").val(),
-        pass: $("#pass").val(),
-        rewind: $("#rewind").val(),
-      };
-  
-      $.ajax({
-        type: "POST",
-        url: "../../controllers/adminRegProces.php",
-        data: formData,
-        dataType: "json",
-        encode: true,
-      }).done(function (data) {
-        console.log(data);
-        if (!data.success) {
-            if (data.errors.name) {
-              document.getElementById("name").value="";
-              $("#jmeno").addClass("has-error");
-              $("#jmeno").append(
-                '<div  class="help-block">' + data.errors.name + "</div>"
-              );
-            }
-    
-            if (data.errors.pass) {
-              document.getElementById("pass").value="";
-              $("#password").addClass("has-error");
-              $("#password").append(
-                
-                '<div  class="help-block">Heslo musí obsahovat alespoň' + data.errors.pass + "<br></div>"
-              );
-            }
-    
-            if (data.errors.rewind) {
-              document.getElementById("pass").value="";
-              document.getElementById("rewind").value="";
-              $("#password").addClass("has-error");
-              $("#password").append(
-                '<div  class="help-block">Hesla ' + data.errors.rewind + "<br></div>"
-              );
-            }
-          } else {
-            document.getElementById("pass").value="";
-            document.getElementById("rewind").value="";
-            document.getElementById("name").value="";
-            $("#suc").addClass("has-error");
-              $("#suc").append(
-                '<div  class="help-block">' + data.message + "<br></div>"
-              );
-          }
-    
-        });
-    
-        event.preventDefault();
-      });
-    
-    
+      $("#password").append(
+        '<div  class="help-block">Chybí některé údaje</div>'
+      );
+    }
+    var formData = {
+      name: $("#name").val(),
+      pass: $("#pass").val(),
+      rewind: $("#rewind").val(),
+    };
+
+    $.ajax({
+      type: "POST",
+      url: "../../controllers/adminRegProces.php",
+      data: formData,
+      dataType: "json",
+      encode: true,
+    }).done(function (data) {
+      console.log(data);
+      if (!data.success) {
+        if (data.errors.name) {
+          document.getElementById("name").value = "";
+          $("#jmeno").addClass("has-error");
+          $("#jmeno").append(
+            '<div  class="help-block">' + data.errors.name + "</div>"
+          );
+        }
+
+        if (data.errors.pass) {
+          document.getElementById("pass").value = "";
+          $("#password").addClass("has-error");
+          $("#password").append(
+
+            '<div  class="help-block">Heslo musí obsahovat alespoň' + data.errors.pass + "<br></div>"
+          );
+        }
+
+        if (data.errors.rewind) {
+          document.getElementById("pass").value = "";
+          document.getElementById("rewind").value = "";
+          $("#password").addClass("has-error");
+          $("#password").append(
+            '<div  class="help-block">Hesla ' + data.errors.rewind + "<br></div>"
+          );
+        }
+      } else {
+        document.getElementById("pass").value = "";
+        document.getElementById("rewind").value = "";
+        document.getElementById("name").value = "";
+        $("#suc").addClass("has-error");
+        $("#suc").append(
+          '<div  class="help-block">' + data.message + "<br></div>"
+        );
+      }
+
     });
-  
- 
+
+    event.preventDefault();
+  });
+
+
+});
+
