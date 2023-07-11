@@ -60,7 +60,7 @@ function CustomAlert(){
         console.log(data);
         res();
         if (!data.success) {
-          customAlert.alert('Jejda')
+          customAlert.alert('Jejda, něco tu chybí...')
            
           } else {
             

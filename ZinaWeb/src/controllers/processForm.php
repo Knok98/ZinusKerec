@@ -4,7 +4,7 @@ $message=new DbContact;
 $data = [];
 $error=[];
 
-if ($_POST['user'] && $_POST['email'] && $_POST['message']) {
+if ($_POST['user'] && $_POST['email'] && $_POST['message'] && $_POST['contactPurpose']) {
     $message->addMsg();
     $data['success'] = true;
 

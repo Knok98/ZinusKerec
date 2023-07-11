@@ -9,7 +9,7 @@ start();
 <link rel='stylesheet' href='../../../css/adminStyles.css  '>
 <div class="container">
 <div class="input-group mb-4">
-  <input type="text" class="form-control mt-5" id="myInput" placeholder="Vyhledat" onkeyup="myFunction()"/>
+  <input type="text" class="form-control mt-5" id="myInput" placeholder="Vyhledat" onkeyup="find()"/>
 </div>
   <table class="table" id="myTable">
     <thead>
@@ -47,24 +47,4 @@ start();
       </tbody>
   </table>
 </div>
-<script>
-function myFunction() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  
-for (i = 1; i < tr.length; i++) {
-  td = tr[i];
-  if (td) {
-    txtValue = td.textContent || td.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      tr[i].style.display = "";
-    } else {
-      tr[i].style.display = "none";
-    }
-  }
-}
-}
-</script>
+<script src="../../controllers/admFormFilter.js" type="text/javascript"></script>
